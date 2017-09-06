@@ -1,0 +1,269 @@
+<!doctype html><!-- indica html5 -->
+<html lang="pt-br">
+	<head>
+		<title>JS4Girls HTML/CSS</title>
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" href="style.css"  />
+		<script type="text/javascript">
+			var nota1, nota2, soma, i;
+			var frutas = ["Maçã","Banana","Pera", "teste", "teste2"];
+
+			nota1 = 8.5;
+			nota2 = 10;
+			soma = nota1 + nota2;
+
+			console.log("Soma das notas " + soma);
+			for(i=0;i<frutas.length;i++){
+				console.log(frutas[i]);	
+			}
+			// console.log(frutas[0]);
+			// console.log(frutas[1]);
+			// console.log(frutas[2]);
+
+
+			//criando objetos com suas propriedades;
+			var meuAviao = {fabricante: "Airbus", modelo: "A279", ano: 2012};
+			meuAviao.cor = "cinza";
+			console.log(meuAviao);
+
+
+			var palavra = "JS4Girls";
+			console.log(palavra.length);
+			console.log(typeof palavra);
+
+
+			function multiplicacao(a,b){
+				var resultado = a*b;
+				return resultado;
+			}
+
+			var teste = multiplicacao(7,5);
+			console.log(teste);
+
+
+			function calculaImc(altura, peso){
+				var imc = peso/(altura*altura);
+				return imc;
+			}
+
+			valorImc = calculaImc(1.67,57);
+			console.log(valorImc);
+
+
+
+
+			function potencializacao(base, potencia){
+				var pot = Math.pow(base, potencia);
+				return pot;
+			}
+
+			resultado = potencializacao(2, 3);
+
+			console.log('Resultado: ' +resultado);
+
+			var idade = 18;
+
+			if(idade >= 18){
+				console.log('Maior de idade');
+			} else {
+				console.log('Menor de idade');
+			}
+			
+			// var estadoCivil = prompt('Informe seu estado civil');
+
+			// switch(estadoCivil){
+
+			// 	case "solteira":
+			// 		console.log("Festa?");
+			// 	break;
+			// 	case "casada":
+			// 		console.log("Parabéns pelo casamento");
+			// 	break;
+			// 	case "divorciada":
+			// 		console.log("Deve ser um alívio");
+			// 	break;
+			// 	case "viuva":
+			// 		console.log("Meus pêsames");
+			// 	break;
+			// 	default:
+			// 		console.log("Complicado");
+			// }
+
+// 			[Exercício] Escreva um código onde inicie um número com o valor 0 e vá até 20,
+// mostrando apenas os valores pares. Sabendo que o operador % retorna o resto da
+// divisão, por exemplo:
+
+			var numero = 11;
+			// while(numero<=20){
+			// 	if(numero%2==0){
+			// 		console.log(numero);
+			// 	}
+			// numero++;
+			// }
+
+			do{
+				console.log(numero);
+				numero++
+			}while(numero<=10)
+
+
+			for(var i=0;i<20;i++){
+				console.log(i);
+			}
+			
+			
+
+			function trocaCor(){		
+			var x = document.querySelectorAll(".topics, .header");
+			var i;
+				for(i=0; i<x.length; i++){
+					x[i].style.backgroundColor = "blue";		
+				}
+			}
+
+			function nameMyFunction(){
+				document.getElementById("teste").innerHTML = "Novo texto";
+
+			}
+
+			function mouseOver(){
+				var x=0;
+				document.getElementById("number").innerHTML = x;
+			}
+			
+			function carregaMensagem(){
+				var conteudo = document.getElementById("dinamic");
+				var text = document.createElement("span");
+
+				text.innerText = "Novo texto!";
+
+				conteudo.appendChild(text);
+					document.getElementById("dinamic").innerHTML = "LUGAR DE MULHER É ONDE ELA QUISER!";
+			}
+
+		</script>
+	</head>
+	<body onload="carregaMensagem()"> <!-- Meu comentario: a tag body é onde irá renderizar o conteúdo -->
+		<div id="home" class="header">
+			<a href="index.html">
+				<img src="assets/images/js4girls-logo.png" />
+			</a>
+			<nav>
+				<ul>
+					<li>
+						<a href="#home" target="_blank">Home</a>
+					</li>
+					<li>
+						<a href="#topics" onclick="trocaCor()">About Us</a>
+					</li>
+					<li>
+						<a href="#contact">Contact</a>
+					</li>
+					<li>
+						<a href="gallery.html">Gallery</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+
+		<div class="initial-section" id="dinamico">
+			<img src="assets/images/campo-por-do-sol.jpg" />
+			<div class="info-group">
+				<h1>Aliquam at Cursus</h1>
+				<h3>Aenean vestibulum mi ut tempus eleifend... Lacus libero interdum velit</h3>
+				<p id="teste" onclick="nameMyFunction()">Clique aqui para mudar conteudo</p>
+				<p onmouseover="mouseOver()">Passe o mouse aqui
+					<span id="number"></span>
+				</p>
+				<a href="">About Us</a>
+				<div id="dinamic" style="margin-top:10px"></div>				
+			</div>
+		</div>
+
+		<div id="topics" class="topics">
+			<div>
+				<img src="assets/images/check.png" />
+				<p>
+					Aliquam at cursus ante, sit amet rhoncus nibh. Mauris lacinia venenatis libero sed ultrices. In blandit, arcu malesuada dignissim tempus, elit metus rhoncus urna, at faucibus arcu libero id augue. Pellentesque fringilla nulla quis quam finibus ornare. Proin vel facilisis erat. Aenean vestibulum, mi ut tempus eleifend.
+				</p>
+			</div>
+			<div>
+				<img src="assets/images/heart.png" />
+				<p>
+					Aliquam at cursus ante, sit amet rhoncus nibh. Mauris lacinia venenatis libero sed ultrices. In blandit, arcu malesuada dignissim tempus, elit metus rhoncus urna, at faucibus arcu libero id augue. Pellentesque fringilla nulla quis quam finibus ornare. Proin vel facilisis erat. Aenean vestibulum, mi ut tempus eleifend.
+				</p>
+			</div>
+			<div>
+				<img src="assets/images/desktop.png" />
+				<p>
+					Aliquam at cursus ante, sit amet rhoncus nibh. Mauris lacinia venenatis libero sed ultrices. In blandit, arcu malesuada dignissim tempus, elit metus rhoncus urna, at faucibus arcu libero id augue. Pellentesque fringilla nulla quis quam finibus ornare. Proin vel facilisis erat. Aenean vestibulum, mi ut tempus eleifend.
+				</p>
+			</div>
+		</div>
+
+		<div class="quote">
+			<h2>
+				Euismod consequat arcu sagittis no quisque egestas taciti sociosq
+			</h2>
+			<p>
+				Euismod consequat arcu sagittis non. Quisque egestas elit vitae velit ornare, non semper lectus ornare. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Pellentesque habitant.
+			</p>
+		</div>
+
+		<div id="contact" class="contact">
+			<h2>Contact</h2>
+			<form name="form1">
+				<div>
+					<label>Nome</label>
+					<input id="nome" type="text" placeholder="Nome" /> <!-- Ao tentar clicar no enviar, você verá a ação do required, apacerá uma mensagem que o campo é obrigatório -->
+
+					<label>E-mail</label>
+					<input id="email" type="text" placeholder="E-mail" />
+				</div>
+
+				<div>
+					<label>Telefone</label>
+					<input id="fone" type="text" placeholder="Telefone" />
+
+					<label>&nbsp;</label>
+					<!-- <input type="button" value="Enviar" /> -->
+					<button onclick="formValidate()">SEND EMAIL</button>
+				</div>
+			</form>
+		</div>
+
+		<footer>
+			<p>
+				Copyright - JS4Girls Floripa - Junho 2016
+			</p>
+		</footer>
+<script type="text/javascript">
+		
+		var conteudo = document.getElementById("dinamico");
+			var text = document.createElement("span");
+
+			text.innerText = "Novo texto!";
+
+			conteudo.appendChild(text);
+	</script>
+
+	<script>
+		//document.querySelector(".header").style.backgroundColor = "blue";
+		function formValidate(){
+			
+			var nome = form1.nome.value;
+			var email = form1.email.value;
+
+
+			if(nome == "" || email == ""){
+				alert("Campos de nome e e-mail requeridos.");
+				return false;
+			}else{
+				alert("Cadastrado com sucesso!");
+			}
+		}
+	</script>
+
+
+	</body>
+</html>

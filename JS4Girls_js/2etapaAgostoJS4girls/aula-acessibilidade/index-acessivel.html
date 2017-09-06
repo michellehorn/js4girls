@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8" />
+		<title>JS4Girls HTML/CSS sem Acessibilidade</title>
+		
+		<link rel="stylesheet" href="style.css" />
+		
+	</head>
+	<body>
+		<div class="header" role="nav">
+			<a href="index.html">
+				<img src="assets/images/js4girls-logo.png" />
+			</a>
+			
+			<nav>
+				<ul>
+					<li>
+						<a href="#gotop">
+							Home
+						</a>
+					</li>
+					<li><a href="#topics">Sobre</a></li>
+					<li><a href="#contact">Contato</a></li>
+					<li><a href="gallery.html">Galeria</a></li>
+				</ul>
+			</nav>
+			
+		</div>
+		
+		<div id="gotop" class="initial-section" role="banner">
+			<img src="assets/images/trends.jpg" />
+			
+			<div class="info-group">
+				<h1>Acessibilidade na Web</h1>
+				<h3>A acessibilidade na web é o consumo da informação por qualquer pessoa por qualquer tipo de meio de acesso.</h3>
+				<a href="#topics">Saiba Mais</a>
+				<!--<button>ABOUT US</button>-->
+			</div>
+		</div>
+		
+		<div id="topics" class="topics" role="main">
+		
+			<div>
+				<img src="assets/images/computador.png" />
+				<strong>A IMPORTÂNCIA, A ABRANGÊNCIA E A UNIVERSALIDADE DA WEB</strong>
+				<p>
+					Quase todos os campo da atividade humana tem de algum modo, influência da web, seja na educação, na formação profissional, no trabalho, na informação, na cultura, nas comunicações, no comércio, nos negócios, na saúde e etc.
+					Portanto, a WEB assume um papel de tão grande importância, que sua acessibilidade passa a não significar acesso a uma coisa só, mas a uma infinidade de aspectos importantes da vida e do cotidiano de cada pessoa.
+					Portanto pessoa com deficiência deveria acessar a web em melhores condições, já que tem mais dificuldade para acessar essas mesmas informações em outros meios.
+				</p>
+			</div>
+			
+			<div>
+				<img src="assets/images/coracao.png" />
+				<strong>A RECIPROCIDADE</strong>
+				<p>
+					Costuma se pensar na acessibilidade como uma via de mão única, como se as pessoas fossem apenas receptoras. Porém isso está longe da verdade, especialmente no caso da web. De acordo com documentos da Iniciativa para a Acessibilidade na Web (W3C-WAI)4, acessibilidade na web significa que pessoas com deficiência podem perceber, compreender, navegar e interagir com a web e podem também contribuir com a web.
+					Portanto, quanto mais pessoas puderem acessar, mais contribuições haverá para a web e, através dela, para a sociedade.
+				</p>
+			</div>
+			
+			<div>
+				<img src="assets/images/check.png" />
+				<strong>A MULTIPLICIDADE E A DIVERSIDADE DE FATORES ENVOLVIDOS</strong>
+				<p>
+					A W3C-WAI identifica 7 itens necessários para haver a acessibilidade:
+					1. Conteúdo - Incluir a informação natural.
+					2. Navegadores executam conteúdo.
+					3. Tecnologia assistiva: usada por pessoas com deficiência, como programas leitores de tela, ampliadores de tela e etc.
+					4. A experiência do usuário e estratégias adaptativas na web.
+					5. Desenvolvedores, designers e etc, e ainda profissionais de TI com ou sem deficiência e os que contribuem com conteúdo.
+					6. Ferramentas de autoria: softwares usados para criar sítios web.
+					7. Ferramentas de avaliação: avaliadores de acessibilidade, validadores de HTML/CSS e etc.
+
+				</p>
+			</div>
+			
+		</div>
+		
+		
+		<div id="contact" class="contact" role="form">
+			<h2>Contato</h2>
+			
+			<form>
+			<!--<form action="envia.php" method="post">-->
+			
+				<div class="form-separator">
+				
+					<div class="form-group">
+						<label for="name">Nome:</label>
+						<input accesskey="n" id="name" type="text" placeholder="Nome" />
+					</div>
+					
+					<div class="form-group">
+						<label for="email">E-mail:</label>
+						<input id="email" type="email" placeholder="E-mail" />
+					</div>
+					
+				</div>
+				
+				<div class="form-separator">
+				
+					<div class="form-group">
+						<label for="phone">Telefone:</label>
+						<input id="phone" type="text" placeholder="Telefone" aria-describedby="dica" aria-required="true" />
+						<div style="display: none;" id="dica">Coloque seu telefone com código de área.</div>
+					</div>
+					
+					<div class="form-group">
+						<label>&nbsp;</label>
+						<input class="btn-submit" type="submit" value="Enviar" />
+					</div>
+					
+				</div>
+				
+			</form>
+			
+		</div>
+		
+		<footer>
+			<p>Copyright - JS4Girls Floripa - Outubro 2016</p>
+		</footer>
+		
+	</body>
+</html>
